@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Agentic Authoring of Simulation Environments | CoRL 2026 Workshop</title>
+<meta name="description" content="CoRL 2026 Workshop on Agentic Authoring of Simulation Environments. Can agentic coding solve the data problem in robotics?" />
+<meta name="theme-color" content="#0a0a0f" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Agentic Authoring of Simulation Environments | CoRL 2026 Workshop" />
+<meta property="og:description" content="Can agentic coding solve the data problem in robotics? A CoRL 2026 workshop bringing together practitioners of agentic simulation authoring." />
+<meta property="og:url" content="https://corl-agentic-authoring.github.io" />
+<meta name="twitter:card" content="summary_large_image" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- Animated background canvas -->
+<canvas id="bg-canvas" aria-hidden="true"></canvas>
+<div class="bg-glow" aria-hidden="true"></div>
+
+<!-- Navigation -->
+<header class="nav" id="nav">
+  <a href="#top" class="nav-brand">
+    <span class="brand-mark">◆</span>
+    <span class="brand-text">Agentic&nbsp;Authoring</span>
+  </a>
+  <nav class="nav-links">
+    <a href="#about">About</a>
+    <a href="#speakers">Speakers</a>
+    <a href="#format">Format</a>
+    <a href="#cfp">Submit</a>
+    <a href="#organizers">Organizers</a>
+  </nav>
+</header>
+
+<main id="top">
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-inner reveal">
+      <div class="kicker">
+        <span class="dot"></span> CoRL&nbsp;2026 · Workshop
+      </div>
+      <h1 class="hero-title">
+        <span class="gradient-text">Agentic Authoring</span><br />
+        <span class="hero-sub-title">of Simulation Environments</span>
+      </h1>
+      <p class="hero-lede">
+        Can agentic coding solve the <span class="hl">data problem</span> in robotics?
+      </p>
+      <div class="hero-cta">
+        <a href="#cfp" class="btn btn-primary">Call for Contributions</a>
+        <a href="#speakers" class="btn btn-ghost">Invited Speakers ↓</a>
+      </div>
+      <div class="hero-meta">
+        <div class="meta-item"><span class="meta-k">Venue</span><span class="meta-v">CoRL 2026</span></div>
+        <div class="meta-item"><span class="meta-k">Format</span><span class="meta-v">Live · Interactive</span></div>
+        <div class="meta-item"><span class="meta-k">Focus</span><span class="meta-v">Open Code</span></div>
+      </div>
+    </div>
+    <div class="scroll-hint" aria-hidden="true">scroll</div>
+  </section>
+
+  <!-- About -->
+  <section class="section" id="about">
+    <div class="section-head reveal">
+      <span class="section-tag">01</span>
+      <h2>Description</h2>
+    </div>
+    <div class="about-grid">
+      <div class="about-lead reveal">
+        <p>
+          <strong>Can agentic coding solve the data problem in robotics?</strong>
+          Historically, data from physics simulations has been severely limited in its
+          diversity and realism, in part because authoring new simulation environments
+          required extensive manual work from trained experts. As long as every gap between
+          simulation and real requires involvement from both tech artists and robotics
+          engineers, the scalability of simulation data is severely limited.
+        </p>
+        <p>
+          In the past few months, newfound capabilities of <span class="hl">agentic coding</span>
+          are being applied to simulation authoring with impressive results (see invited
+          speakers), holding a promise to alleviate the bottleneck of manual simulation tuning
+          and usher a new era of scalable generation of synthetic robotics data. Agentic coding
+          may allow us to automate every step of the simulation authoring pipeline: create a
+          digital approximation of any robotics scene (and infinite variations thereof), design
+          tasks (rewards and curricula), and reduce sim/real gaps (e.g., tune physics and
+          appearance parameters). At the same time, we don't yet know what are the blockers and
+          limitations, nor do we know where the greatest opportunities are.
+        </p>
+        <p>
+          The aim of this workshop is to bring together practitioners of this
+          <span class="hl">nascent field</span> for knowledge sharing and joint exploration of
+          best practices. Our hope is to establish a roadmap for this nascent approach and gain
+          clarity on current and future blockers and opportunities, as seen from the lens of
+          robotics.
+        </p>
+      </div>
+      <aside class="about-stats reveal">
+        <div class="stat-card">
+          <div class="stat-num">~50</div>
+          <div class="stat-label">Expected attendees</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num">½ day</div>
+          <div class="stat-label">Half-day, in-person event</div>
+        </div>
+        <div class="stat-card accent">
+          <div class="stat-num">Open</div>
+          <div class="stat-label">Open source code</div>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- Speakers -->
+  <section class="section" id="speakers">
+    <div class="section-head reveal">
+      <span class="section-tag">02</span>
+      <h2>Invited Speakers</h2>
+    </div>
+    <div class="speaker-grid">
+
+      <article class="speaker-card reveal">
+        <div class="speaker-top">
+          <div class="avatar">SW</div>
+          <span class="badge badge-committed">Committed</span>
+        </div>
+        <h3>Shangzhe (Elliott) Wu</h3>
+        <div class="speaker-affil">Cambridge</div>
+        <p class="speaker-work">Author of <a href="https://articraft3d.github.io/" target="_blank" rel="noopener">ArtiCraft 3D</a> and <a href="https://ruiningli.com/particulate" target="_blank" rel="noopener">Particulate</a> (CVPR 2026).</p>
+      </article>
+
+      <article class="speaker-card reveal">
+        <div class="speaker-top">
+          <div class="avatar">MC</div>
+          <span class="badge badge-committed">Committed</span>
+        </div>
+        <h3>Mauro Comi</h3>
+        <div class="speaker-affil">Bristol University · Mistral</div>
+        <p class="speaker-work">Author of an upcoming project on agentic real-to-sim.</p>
+      </article>
+
+      <article class="speaker-card reveal">
+        <div class="speaker-top">
+          <div class="avatar">HW</div>
+          <span class="badge badge-committed">Committed</span>
+        </div>
+        <h3>Huamin Wang</h3>
+        <div class="speaker-affil">Style3D Research</div>
+        <p class="speaker-work">Practitioner of using agentic coding for authoring sim-ready assets.</p>
+      </article>
+
+      <article class="speaker-card reveal">
+        <div class="speaker-top">
+          <div class="avatar">HX</div>
+          <span class="badge badge-committed">Committed</span>
+        </div>
+        <h3>Hongchi Xia</h3>
+        <div class="speaker-affil">UIUC</div>
+        <p class="speaker-work">Author of <a href="https://research.nvidia.com/labs/cosmos-lab/sage/" target="_blank" rel="noopener">SAGE</a> (CVPR 2026).</p>
+      </article>
+
+      <article class="speaker-card reveal">
+        <div class="speaker-top">
+          <div class="avatar">NP</div>
+          <span class="badge badge-committed">Committed</span>
+        </div>
+        <h3>Nicholas Pfaff</h3>
+        <div class="speaker-affil">MIT</div>
+        <p class="speaker-work">Author of <a href="https://scenesmith.github.io/" target="_blank" rel="noopener">SceneSmith</a> (ICML 2026 spotlight).</p>
+      </article>
+
+      <article class="speaker-card reveal">
+        <div class="speaker-top">
+          <div class="avatar">ZC</div>
+          <span class="badge badge-online">Online</span>
+        </div>
+        <h3>Ziang Cao</h3>
+        <div class="speaker-affil">Nanyang Technical University</div>
+        <p class="speaker-work">Author of <a href="https://physx-anything.github.io/" target="_blank" rel="noopener">PhysX-Anything</a> (CVPR 2026).</p>
+      </article>
+
+      <article class="speaker-card reveal">
+        <div class="speaker-top">
+          <div class="avatar">JG</div>
+          <span class="badge badge-requested">Requested</span>
+        </div>
+        <h3>Jiaxin Ge</h3>
+        <div class="speaker-affil">Berkeley</div>
+        <p class="speaker-work">Author of <a href="https://fugtemypt123.github.io/VIGA-website/" target="_blank" rel="noopener">Vision-as-Inverse-Graphics Agent</a>.</p>
+      </article>
+
+    </div>
+    <p class="legend reveal">
+      <span class="badge badge-committed">Committed</span> confirmed in person, full workshop duration ·
+      <span class="badge badge-online">Online</span> confirmed, online only ·
+      <span class="badge badge-requested">Requested</span> invited, no reply yet
+    </p>
+  </section>
+
+  <!-- Format -->
+  <section class="section" id="format">
+    <div class="section-head reveal">
+      <span class="section-tag">03</span>
+      <h2>Proposed Format and Interactivity</h2>
+    </div>
+    <div class="about-lead wide reveal">
+      <p>
+        In practice, agentic authoring relies on <span class="hl">harness design</span>:
+        agentic workflows, prompts, multi-agent assemblies, involving different approaches
+        to grounding the simulation with real-world data. Therefore, presenters will be
+        invited to run live interactive sessions where we inspect together the intermediate
+        artifacts and scrutinize how the agent assembles and debugs the simulation
+        environment, engaging all participants in the spectator sport of autonomous problem
+        solving!
+      </p>
+      <p>
+        To promote interactivity, we will introduce several micro-awards, and invite the
+        attendees to vote for "most creative solution", "best use of limited resources", or
+        similar titles.
+      </p>
+    </div>
+  </section>
+
+  <!-- Call for contributions -->
+  <section class="section" id="cfp">
+    <div class="cfp-panel reveal">
+      <div class="section-tag">04</div>
+      <h2>Contributed Papers Plan</h2>
+      <p>
+        In order to encourage open-source practices that accelerate the entire community, we
+        will require submissions of demos with <strong>open source code</strong> (as well as
+        a short paper clarifying the novelty of the approach and the relation to other works).
+        Evaluating the submissions will consider the merits of the code: its documentation,
+        ease of use and extension, as well as the clarity of the presentation.
+      </p>
+      <div class="cfp-note">
+        Submission portal &amp; deadlines: <span class="tbd">coming soon</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Participation -->
+  <section class="section" id="participation">
+    <div class="section-head reveal">
+      <span class="section-tag">05</span>
+      <h2>Plans to Encourage Participation and Diversity</h2>
+    </div>
+    <div class="about-lead wide reveal">
+      <p>
+        Our organizing team and invited speakers represent a diverse range of geographical
+        areas, institutions, and areas of expertise. This will allow us to reach multiple
+        audiences when advertising this workshop. In particular, we will advertise the
+        workshop through channels of the robotics simulation community (e.g.,
+        <a href="https://github.com/google-deepmind/mujoco" target="_blank" rel="noopener">MuJoCo</a>,
+        with its more than 13K followers). In order to further showcase the workshop in a
+        compelling format, we will assemble a compilation of the demo videos of the invited
+        speakers.
+      </p>
+      <p>
+        This is a new and wide-open corner of robotics that relies on open-source tools and
+        data, and therefore has opportunities for impact even without an expensive robot lab
+        nor large-scale training infrastructure. Therefore, we expect submissions to this
+        workshop will come from a variety of industries, backgrounds, and career stages; we
+        intend to further promote this diversity through the selection process.
+      </p>
+    </div>
+  </section>
+
+  <!-- Logistics -->
+  <section class="section" id="logistics">
+    <div class="section-head reveal">
+      <span class="section-tag">06</span>
+      <h2>Logistics and Resources</h2>
+    </div>
+    <div class="logi-grid">
+      <div class="logi-card reveal">
+        <div class="logi-k">Estimated audience size</div>
+        <div class="logi-v">50</div>
+        <p>Since this is a new and immature area, we expect probably less than 50 people.</p>
+      </div>
+      <div class="logi-card reveal">
+        <div class="logi-k">Physical requirements</div>
+        <div class="logi-v">Internet + projector</div>
+        <p>In order to support live interactive presentations, we would need a good internet connection, and we'd need to allow different speakers to connect their laptops to the projector.</p>
+      </div>
+      <div class="logi-card reveal">
+        <div class="logi-k">Special requirements</div>
+        <div class="logi-v">N/A</div>
+        <p>N/A</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Commitments -->
+  <section class="section" id="commitments">
+    <div class="section-head reveal">
+      <span class="section-tag">07</span>
+      <h2>Commitments</h2>
+    </div>
+    <div class="commit-grid">
+      <div class="commit-item reveal"><span class="check">✓</span> At least one organizer will attend CoRL 2026 in person.</div>
+      <div class="commit-item reveal"><span class="check">✓</span> Organizers will attend the CoRL 2026 workshop organizers meeting.</div>
+      <div class="commit-item reveal"><span class="check">✓</span> Organizers will submit a post-workshop artifact.</div>
+      <div class="commit-item reveal"><span class="check">✓</span> Willingness to merge with related proposals if requested.</div>
+    </div>
+  </section>
+
+  <!-- Organizers -->
+  <section class="section" id="organizers">
+    <div class="section-head reveal">
+      <span class="section-tag">08</span>
+      <h2>Organizers</h2>
+    </div>
+    <div class="org-grid org-grid-3">
+      <article class="org-card reveal">
+        <div class="avatar avatar-lg">TE</div>
+        <h3>Tom Erez</h3>
+        <div class="speaker-affil">Google DeepMind</div>
+        <a class="org-mail" href="mailto:etom@google.com">etom@google.com</a>
+      </article>
+      <article class="org-card reveal">
+        <div class="avatar avatar-lg">BE</div>
+        <h3>Buzz Embley-Riches</h3>
+        <div class="speaker-affil">UCL</div>
+        <a class="org-mail" href="mailto:jonathan.embley-riches.22@ucl.ac.uk">jonathan.embley-riches.22@ucl.ac.uk</a>
+      </article>
+      <article class="org-card reveal">
+        <div class="avatar avatar-lg">FW</div>
+        <h3>Fangyin Wei</h3>
+        <div class="speaker-affil">Tesla</div>
+        <a class="org-mail" href="mailto:lily.weifangyin@gmail.com">lily.weifangyin@gmail.com</a>
+      </article>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <span class="brand-mark">◆</span> Agentic Authoring of Simulation Environments
+    </div>
+    <div class="footer-meta">CoRL 2026 Workshop</div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
